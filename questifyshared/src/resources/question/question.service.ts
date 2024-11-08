@@ -44,7 +44,7 @@ class QuestionService{
     }
 
     async save(dados: Question): Promise<string> {
-        
+        console.log("BASE URL É :",this.baseUrl)
         const userSession = this.auth.getUserSession()
         console.table(dados)
         //dados.userId = userSession!.id
