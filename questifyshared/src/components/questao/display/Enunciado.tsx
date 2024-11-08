@@ -8,13 +8,13 @@ interface EnunciadoProps {
 
 const Enunciado: React.FC<EnunciadoProps> = ({text}) => {
 
-  //const contentState = convertFromRaw(JSON.parse(text)); // Aqui assumo que `text` é o JSON salvo
-  //const htmlContent = stateToHTML(contentState);
+  const contentState = convertFromRaw(JSON.parse(text)); // Aqui assumo que `text` é o JSON salvo
+  const htmlContent = stateToHTML(contentState);
   return (
 
     <div>
-      {/*<span className='text-md font-bold' dangerouslySetInnerHTML={{ __html: htmlContent }} />*/}
-        <span>{text}</span>
+      <span className='text-md font-bold' dangerouslySetInnerHTML={{ __html: htmlContent }} />
+        {/*<span>{text}</span>*/}
     </div>
   );
 };
